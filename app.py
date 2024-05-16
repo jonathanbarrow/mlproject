@@ -14,3 +14,9 @@ app=application
 def index():
     return render_template('index.html')
 
+@app.route('/predictedata',methods=['GET', 'POST'])
+def predict_datapoint():
+    if request.method=='GET':
+        return render_template('home.html')
+    else:
+        data=CustomData
